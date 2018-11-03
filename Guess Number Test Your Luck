@@ -1,0 +1,22 @@
+const min = 1;
+const max = 10;
+
+function getRandomInt(min, max){
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+let result = getRandomInt(min,max);
+var input = parseInt(prompt('Please Enter Your Guess'));
+
+for (i = 0; i < 10 ; i++){ //let the user have 10 times to guess
+  if (input ==  result){
+    console.log('Marvelous');
+    break;
+  } else if (input < result) {
+    console.log('Your guess is lower than result');
+        input = parseInt(prompt('Please Enter Your Guess'));
+  } else if (input > result){
+    console.log('Your guess is higher than result');
+        input = parseInt(prompt('Please Enter Your Guess'));
+  }
+}
